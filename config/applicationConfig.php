@@ -84,8 +84,8 @@ class config
 	const wallPostCaption = 'Like this page and grab a discount!';
 	// Text to use for wallposts
 	const wallPostMessage = 'Demonstration of a Social Media marketing application that rewards customers who like a Facebook page with a configurable Magento discount coupon.';
-	// page will load standalone if set to true, will redirect to Facebook if set to false.
-	const allowStandAlone = true;
+	// page will load standalone if set to true, will redirect to Facebook fbURL (configured above) if set to false.
+	const allowStandAlone = false;
 	// if app connected - user must also like page to see content
 	const pagelikerequired = true;	
 	// enable/disable customer wall posts when discount code is issued
@@ -105,14 +105,14 @@ class config
 	const couponValue = '15';
 	// validity of coupon in days, i.e. 30 = coupon expires in 30 days. Leave blank for coupon that does not expire.
 	const couponValidty = '30';
-	// coupon prefix, leave blank for no prefix
+	// coupon prefix, leave blank for no prefix or specify prefix, useful for identifying/grouping coupons in Magento admin
 	const couponPrefix = 'FB';
-	// coupon customer group ids
+	// coupon customer group ids, set group ids the coupon is valid for.
 	const couponCustomerGroups = '0,1';
 
 	// path to root magento installation folder	
 	const PATH_TO_MAGENTO_INSTALLATION = '/home/www/dev/magento/';
-	// show the comments facebook plugin	
+	// show the comments facebook plugin - used by the demo
 	const showComments = true;
 	// show the demo info box set this to false for production
 	const demo = true;

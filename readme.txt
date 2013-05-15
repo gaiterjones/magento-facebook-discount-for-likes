@@ -1,3 +1,7 @@
+Live Demo - To see this code working visit
+
+https://www.facebook.com/pages/gaiterjones/243428839036258
+
 Installation instructions
 
 Copy files to your hosting website. Facebook applications require both http and https
@@ -27,11 +31,14 @@ Create a new MySQL database and add the following table
  
  Add the application to a Facebook page tab if required.
  
- Configure config.php within the application
-	configure database credentials
-	configure facebook application credentials
+ Configure the App by editing - config/applicationConfig.php
 	configure application and coupon options
-	create application images and upload to /images folder
+	create application images and upload to /images folder - see demo images for details
+
+ Configure your App Credentials by editing - config/applicationCredentials.php
+ 	configure database credentials
+	configure facebook application credentials
+	
 	
 Test the application.
 
