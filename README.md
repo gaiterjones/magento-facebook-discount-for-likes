@@ -4,7 +4,13 @@
 Live demo at [https://www.facebook.com/pages/gaiterjones/243428839036258](http://)
 
 ### Synopsis
-The Facebook “Like” is an important Social Media Marketing tool. It instills customer confidence and enables new marketing opportunities. Increasing the number of likes your e-Commerce site has can sometimes be difficult but one way to really boost those likes is to offer a reward in the form of a discount code if customers like your Facebook page.
+The Facebook “Like” is an important Social Media Marketing tool. It instills customer confidence and enables new marketing opportunities. Increasing the number of likes your e-Commerce site has can sometimes be difficult but one way to really boost those likes is to offer a reward in the form of a discount code if customers like your Facebook page. This application interfaces with your Magento Store and runs as a Facebook Tab Application to create configurable dynamic dicount codes for Facebook users who like your page.
+
+You must create a Facebook application to use with this system. Users must first connect to the Facebook application which lets us capture user data and store it in our Database, this is used to prevent multiple attempts to obtain discounts. One the application is connected and the page is liked the discount code is issued.
+
+This is really a proof of concept, the way you would actually implement this offer depends on how many current likes your Facebook page has, do you want to offer a coupon code for existing users who have already liked the page? This could get costly if you already have thousands of likes. Think about how you will implement the coupon, perhaps you will offer a discount for a total spend over a certain amount.
+
+Comments for improvement and development are welcome.
 
 ### Version
 ***
