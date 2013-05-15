@@ -1,12 +1,20 @@
 ## Magento Discount Coupon Code for Facebook Likes
 ***
 
-Live demo at [https://www.facebook.com/pages/gaiterjones/243428839036258](http://)
+Live demo at [https://www.facebook.com/pages/gaiterjones/243428839036258](https://www.facebook.com/pages/gaiterjones/243428839036258)
+
+![image](http://blog.gaiterjones.com/wp-content/uploads/2012/06/magentoDicountsforLikes1-620x251.jpg)
 
 ### Synopsis
 The Facebook “Like” is an important Social Media Marketing tool. It instills customer confidence and enables new marketing opportunities. Increasing the number of likes your e-Commerce site has can sometimes be difficult but one way to really boost those likes is to offer a reward in the form of a discount code if customers like your Facebook page. This application interfaces with your Magento Store and runs as a Facebook Tab Application to create configurable dynamic dicount codes for Facebook users who like your page.
 
-You must create a Facebook application to use with this system. Users must first connect to the Facebook application which lets us capture user data and store it in our Database, this is used to prevent multiple attempts to obtain discounts. One the application is connected and the page is liked the discount code is issued.
+I wanted to accomplish this with a standalone PHP application embedded into a Facebook page tab. The goals were to step the customer through connecting with the Facebook application, liking the page and generating / managing the discount codes and Magento coupons.
+
+We want to take full advantage of the marketing information we can glean from Facebook so another requirement was so store the customers Facebook profile information in a database along with the generated discount code.
+
+We can also generate a wall post on the customers Facebook wall to ensure our offer is shared with their Facebook friends.
+
+This PHP application uses the Facebook API to communicate with Facebook and loads Magento externally to generate the Magento coupon sales rules dynamically.
 
 This is really a proof of concept, the way you would actually implement this offer depends on how many current likes your Facebook page has, do you want to offer a coupon code for existing users who have already liked the page? This could get costly if you already have thousands of likes. Think about how you will implement the coupon, perhaps you will offer a discount for a total spend over a certain amount.
 
@@ -17,9 +25,19 @@ Comments for improvement and development are welcome.
 	@version		0.2.0
 	@since			05 2013
 	@author			gaiterjones
-	@documentation	blog.gaiterjones.com
+	@documentation	[blog.gaiterjones.com](http://blog.gaiterjones.com)
 	@twitter		twitter.com/gaiterjones
 	
+### Requirements
+
+* PHP5.x/MYSQL
+
+* Public webspace on the same server as your Magento installation
+ 
+* A valid configured Facebook Tab application.
+ 
+* Magento 1.3+
+
 ### Installation
 
 Copy files to your hosting website. Facebook applications require both http and https
