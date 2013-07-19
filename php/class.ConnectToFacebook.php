@@ -20,7 +20,9 @@
  *  @package    
  *  @license    http://www.gnu.org/licenses/ GNU General Public License
  * 	
- *
+ *  NOTE curl error affects fb login -
+	error is related to a missing package: ca-certificates. Install it -
+	sudo apt-get install ca-certificates
  */
 
  

@@ -78,7 +78,7 @@ class GenerateMagentoCoupon // creates a Magento discount coupon
         $model->setProductIds('');
         $model->setSortOrder(1);
         $model->setSimpleAction('cart_fixed');
-        $model->setDiscountAmount(5);
+        $model->setDiscountAmount($this->__config->get('couponValue'));
         $model->setDiscountStep(0);
         $model->setSimpleFreeShipping(0);
         $model->setTimesUsed(0);

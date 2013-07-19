@@ -66,6 +66,8 @@ class Application
 		$this->set('discountCode', false);
 		$this->set('likeStatus', false);
 		$this->set('discountCodeAlreadyIssued', false);
+		
+		$this->set('languagecode',$this->getBrowserLanguage()); // language set from BROWSER
 	}
 
 	private function connectToFacebook()
@@ -162,7 +164,31 @@ class Application
 	{
 		$obj = new GenerateMagentoCoupon($this->__['discountCode']);
 			unset($obj);
-	}	
+	}
+
+	public function getBrowserLanguage() {
+	
+		if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
+		{
+			foreach (explode(",", strtolower($_SERVER['HTTP_ACCEPT_LANGUAGE'])) as $accept) {
+				if (preg_match("!([a-z-]+)(;q=([0-9.]+))?!", trim($accept), $found)) {
+					$langs[] = $found[1];
+					$quality[] = (isset($found[3]) ? (float) $found[3] : 1.0);
+				}
+			}
+			// Order the language codes
+			array_multisort($quality, SORT_NUMERIC, SORT_DESC, $langs);
+			
+			$_languageCode=explode('-',$langs[0]);
+			$_languageCode=$_languageCode[0];
+			return strtolower($_languageCode);
+			
+		} else {
+		
+			return 'en';
+		}
+	    
+    }		
 
 	private function renderPage()
 	{
@@ -189,6 +215,7 @@ class Application
 		  "discountCodeAlreadyIssued" => $this->__['discountCodeAlreadyIssued'],
 		  "errorMessage" => $this->__['errorMessage'],
 		  "facebookAppConnected" => $this->__['facebookAppConnected'],
+		  "languagecode" => $this->__['languagecode'],
 		  "likestatus" => $this->__['likeStatus']
 		));		
 
